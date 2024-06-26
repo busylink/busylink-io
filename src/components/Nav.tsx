@@ -6,6 +6,7 @@ export default function Nav() {
             <div class="flex-1">
                 <a class="btn btn-ghost text-xl">busylink.io</a>
             </div>
+            {/*
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
                     <li><a>Link</a></li>
@@ -20,6 +21,7 @@ export default function Nav() {
                     </li>
                 </ul>
             </div>
+            /*/}
             <div class="flex-none">
                 <ThemeToggle />
             </div>

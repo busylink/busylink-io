@@ -8,9 +8,16 @@ const h = html`
 `
 
 export const Newsletter = () => {
-    return <div class="grid place-content-center">
+    return <>
+        <div class="bg-primary text-primary-content p-10">
+            <h2 class="text-3xl font-bold p-5">Coming Soon</h2>
+            <p>We are building the MVP version. We have not released the product yet. Join the newsletter to get updates of the development process.</p>
+        </div>
+        <div class="grid place-content-center">
         {h}
-        </div>;
+        </div>
+    </>;
+
 }
 
 export default Newsletter;

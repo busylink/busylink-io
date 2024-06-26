@@ -16,8 +16,8 @@ function App() {
       <div class="lg:container lg:mx-auto">
         {/* <Colors /> */}
         <Hero />
-        <Newsletter />
         <Features />
+        <Newsletter />
         <HowTo />
         <Architecture />
       </div>
