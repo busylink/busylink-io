@@ -1,0 +1,39 @@
+%%{init: {'theme':'neutral'}}%%
+graph TD
+    Internet[Internet]
+    BLDB[(BusyLink\nDatabase)]
+    
+    YourAPIServer[Your API server]
+    YourFrontEndFiles[Your Front-End files]
+
+    subgraph BL[BusyLink.io]
+        class LTitle hiddenClass;
+        authN[Authentication]
+        authZ[Authorization]
+        magic[Magic]
+    end
+    
+    Internet --> authN
+    
+    authN --> authZ
+    authZ --> magic
+    BL --> BLDB
+    magic -. "Current user\nRoles\nPermissions" .-> YourAPIServer
+    magic --> YourFrontEndFiles
+
+    subgraph ys[Your SaaS]
+        YourAPIServer
+        YourFrontEndFiles
+    end
+    
+    style BL fill:#779CAB,color:white
+    style BLDB fill:#779CAB,color:white
+    style L1 fill:#779CAB,color:white
+    
+    style ys fill:#32DE8A
+    style L2 fill:#32DE8A
+    
+    subgraph Legend
+        L1[BusyLink.io]
+        L2[Your app]
+    end

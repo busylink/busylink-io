@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'jakarta';
+    src: url("plus_jakarta_sans/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: 'jakarta', sans-serif;
+}
