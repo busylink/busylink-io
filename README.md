@@ -11,3 +11,9 @@ pnpm run build
 ```
 
 Deploy the `dist` folder.
+
+# Libraries
+
+- Solid.js
+- Tailwind CSS
+- DaisyUI
