@@ -6,6 +6,7 @@ import Features from './components/Features'
 import { HowTo } from './components/HowTo'
 import { Architecture } from './components/Architecture'
 import Newsletter from './components/Newsletter'
+import { Footer } from './components/Footer'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Newsletter />
         <HowTo />
         <Architecture />
+        <Footer />
       </div>
     </div>
   )
