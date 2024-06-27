@@ -1,6 +1,53 @@
+import Prism from 'prismjs';
+Prism.manual = true;
+import 'prismjs/components/prism-yaml';
+import 'prismjs/themes/prism.css';
+
+const code = `
+name: My SaaS Gateway Configuration
+server:
+  host: 127.0.0.1
+  port: 80
+  url: http://localhost:80
+routes:
+  # Route to the API, protected with OAuth2 using Google
+  - name: V1 of the API
+    from: /api/v1/*
+    removeFromPath: "/api/v1/"
+    to: http://localhost:3000
+    authentication:
+      enabled: true
+      method: oauth2
+      provider: google
+  # Route to the FrontEnd, static files that are served from the Gateway
+  - name: FrontEnd
+    from: /
+    toFolder: ./frontend/dist/
+    static: true
+
+authenticationProviders:
+  google:
+    clientId: 123456789123-ETlUWIBfeIs7DZJaTKSoQ0iYtlYfmWo3HEAmImxv.apps.googleusercontent.com
+    clientSecret: GOCSPX-q4VdlU5dQ4Q9wfdmmUg4
+
+encryption:
+  encryptedCookieKey: WW91IGFyZSB0b28gY2xldmVyLiBKdXN0IGJ1eSBpdC4=
+
+notification:
+  email:
+    enabled: true
+    smtp:
+      host: 127.0.0.1
+      port: 1025
+      username: test@example.com
+      password: abcdefg
+`;
+
 
 export const HowTo = () => {
-  return (
+  window.setTimeout(() => Prism.highlightElement(document.querySelector("#thecode"), true, () => {}), 1000);
+
+  return (<>
     <div class="flex p-5 bg-primary text-primary-content">
         <div class="w-1/2 p-2">
             <img src="images/howto.svg" alt="How to use" />
@@ -14,5 +61,11 @@ export const HowTo = () => {
             </ul>
         </div>
     </div>
-  )
+    <div class="flex p-5 bg-primary text-primary-content">
+        <div>
+            <h3 class="text-2xl p-10">Example configuration file</h3>
+            <pre><code id="thecode" class="language-yaml">{code}</code></pre>
+        </div>
+    </div>
+  </>)
 }
