@@ -5,6 +5,7 @@
 @font-face {
     font-family: 'jakarta';
     src: url("../assets/plus_jakarta_sans/PlusJakartaSans-VariableFont_wght.ttf");
+    font-display: swap;
 }
 
 body {
