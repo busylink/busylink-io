@@ -4,7 +4,7 @@ export default function Nav() {
     return (
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a class="btn btn-ghost text-xl">busylink.io</a>
+                <a href='https://busylink.io' class="btn btn-ghost text-xl">busylink.io</a>
             </div>
             {/*
             <div class="flex-none">
