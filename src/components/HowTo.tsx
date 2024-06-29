@@ -46,6 +46,7 @@ notification:
       password: abcdefg
 `;
 
+import howtoImg from '../../assets/howto.svg';
 
 export const HowTo = () => {
 
@@ -62,7 +63,7 @@ export const HowTo = () => {
   return (<>
     <div class="flex p-5 bg-primary text-primary-content">
         <div class="w-1/2 p-2">
-            <img src="images/howto.svg" alt="A person using busylink.io" />
+            <img src={howtoImg} alt="A person using busylink.io" />
         </div>
         <div class="w-1/2 p-2 p-l-5">
             <h2 class="text-3xl p-10">How to use</h2>
