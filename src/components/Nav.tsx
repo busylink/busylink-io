@@ -1,10 +1,14 @@
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from './ThemeToggle';
+
+import logo from '../../assets/logo/busylink_white.svg';
 
 export default function Nav() {
     return (
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a href='https://busylink.io' class="btn btn-ghost text-xl">busylink.io</a>
+                <a href='https://busylink.io' class="btn btn-ghost text-xl">
+                    <img src={logo} style={{height: "160px"}} alt='busylink.io logo' />
+                </a>
             </div>
             {/*
             <div class="flex-none">
