@@ -1,0 +1,35 @@
+name: My SaaS Gateway Configuration
+server:
+  host: 127.0.0.1
+  port: 80
+  url: http://localhost:80
+routes:
+  - name: V1 of the API
+    from: /api/v1/*
+    removeFromPath: "/api/v1/"
+    to: http://localhost:3000
+    authentication:
+      enabled: true
+      method: oauth2
+      provider: google
+  - name: FrontEnd
+    from: /
+    toFolder: ./frontend/dist/
+    static: true
+
+authenticationProviders:
+  google:
+    clientId: 123456789123-ETlUWIBfeIs7DZJaTKSoQ0iYtlYfmWo3HEAmImxv.apps.googleusercontent.com
+    clientSecret: GOCSPX-q4VdlU5dQ4Q9wfdmmUg4
+
+encryption:
+  encryptedCookieKey: WW91IGFyZSB0b28gY2xldmVyLiBKdXN0IGJ1eSBpdC4=
+
+notification:
+  email:
+    enabled: true
+    smtp:
+      host: 127.0.0.1
+      port: 1025
+      username: test@example.com
+      password: abcdefg
