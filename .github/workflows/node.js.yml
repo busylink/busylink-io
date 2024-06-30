@@ -25,9 +25,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
+        cache: 'pnpm'
+    - uses: pnpm/action-setup@v4
+      with:
+        version: 9
+    - run: pnpm ci
+    - run: pnpm run build
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
       with:
