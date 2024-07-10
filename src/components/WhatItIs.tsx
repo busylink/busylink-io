@@ -15,6 +15,9 @@ export const WhatItIs = () => {
         <h2 class="text-2xl font-bold mb-4">What is <a href="http://busylink.io">busylink.io</a>?</h2>
         <p class="mb-4 text-lg">busylink.io is an application gateway that simplifies SaaS development. It handles tasks like authentication, user workflows, roles management, and payments, so you can focus on building your app.</p>
         <p class="mb-4 text-lg">Configure busylink.io with YAML files to integrate your app quickly and easily, saving you significant time and effort.</p>
+        <p class="mb-4 text-lg">When a request comes to the gateway, it finds the logged user, their roles and permissions, their paid products.
+            Then it forwards the request to your app by using a JWT token with the user's information.
+        </p>
     </div>
 </section>
 
