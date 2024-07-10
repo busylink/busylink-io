@@ -4,7 +4,7 @@ import logo from '../../assets/logo/busylink_white.svg';
 
 export const Footer = () => {
   return (<>
-  <footer class="footer bg-base-200 text-base-content p-10">
+  <footer class="footer bg-base-200 text-base-content p-10 mt-4">
   <aside>
     <img src={logo} alt='busylink.io logo' />
     <p>
@@ -13,6 +13,14 @@ export const Footer = () => {
       Providing useful tech since 2024
     </p>
   </aside>
+
+  <nav>
+    <h6 class="footer-title">Contact</h6>
+    <p>If you have any questions or suggestions, please write an e-mail to: &#098;&#117;&#115;&#121;&#108;&#105;&#110;&#107;&#064;&#098;&#117;&#115;&#121;&#108;&#105;&#110;&#107;&#046;&#105;&#111;
+</p>
+  </nav>
+
+{/*   
   <nav>
     <h6 class="footer-title">Services</h6>
     <a class="link link-hover">Branding</a>
@@ -33,6 +41,7 @@ export const Footer = () => {
     <a class="link link-hover">Privacy policy</a>
     <a class="link link-hover">Cookie policy</a>
   </nav>
-</footer>
+ */}
+ </footer>
   </>)
 }

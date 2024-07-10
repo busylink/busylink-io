@@ -1,4 +1,3 @@
-import ThemeToggle from './ThemeToggle';
 
 import logo from '../../assets/logo/busylink_white.svg';
 
@@ -27,7 +26,7 @@ export default function Nav() {
             </div>
             /*/}
             <div class="flex-none">
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
             </div>
         </div>
     )

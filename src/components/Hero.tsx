@@ -12,8 +12,8 @@ const Hero = () => {
                     alt="Code illustration"
                      />
                 <div>
-                <h1 class="mb-8 text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-600">Start coding your SaaS in 1 hour</h1>
-                <p class="mb-8 text-xl">You can focus on your business, we handle the boring tasks.</p>
+                <h1 class="mb-8 text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-600">Save weeks developing your SaaS Application</h1>
+                <p class="mb-8 text-xl">You focus on your business; We handle the boring tasks.</p>
                 </div>
             </div>
         </div>
